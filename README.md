@@ -26,9 +26,9 @@ CREATE TABLE Bebida (
     ID_Bebida INT PRIMARY KEY IDENTITY(1,1),
     Nome NVARCHAR(255) NOT NULL,
     Tipo NVARCHAR(50) NOT NULL,
-    Teor_Alcoolico DECIMAL(5,2) NOT NULL,  -- Aumentando a precisão para Teor_Alcoolico
+    Teor_Alcoolico DECIMAL(5,2) NOT NULL,  
     Volume INT NOT NULL,
-    Preco DECIMAL(7,2) NOT NULL,  -- Aumentando a precisão para Preco
+    Preco DECIMAL(7,2) NOT NULL,  
     Fornecedor_ID INT NOT NULL,
     Tipo_ID INT NOT NULL,
     FOREIGN KEY (Fornecedor_ID) REFERENCES Fornecedor(ID_Fornecedor),
