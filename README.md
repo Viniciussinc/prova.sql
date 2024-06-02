@@ -76,3 +76,6 @@ INSERT INTO Pedido (Data_Pedido, Cliente_ID, Bebida_ID, Quantidade) VALUES
 
 ```
 
+#    6 - CRUD
+        Create
+
