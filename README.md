@@ -49,4 +49,28 @@ CREATE TABLE Pedido (
     Bebida_ID INT NOT NULL,
     Quantidade INT NOT NULL,
     FOREIGN KEY (Cliente_ID) REFERENCES Cliente(ID_Cliente),
-    FOREIGN KEY (Bebida_ID) REFERENCES Bebida(ID_Bebida)```
+    FOREIGN KEY (Bebida_ID) REFERENCES Bebida(ID_Bebida)
+```
+
+
+#4 - Inserção de dados 
+
+``` sql
+INSERT INTO Fornecedor (Nome_Empresa, CNPJ, Telefone, Endereco) VALUES
+('Cervejaria XYZ', '12345678000100', '123456789', 'Rua A, 123, Bairro B, Cidade C, Estado D, 12345-678'),
+('Destilaria ABC', '98765432000100', '987654321', 'Rua X, 456, Bairro Y, Cidade Z, Estado W, 87654-321');
+INSERT INTO Tipo_Bebida (Descricao) VALUES
+('Cerveja'),
+('Vodka');
+INSERT INTO Bebida (Nome, Tipo, Teor_Alcoolico, Volume, Preco, Fornecedor_ID, Tipo_ID) VALUES
+('Cerveja Pilsen', 'Cerveja', 4.50, 500, 7.50, 1, 1),
+('Vodka Absolut', 'Vodka', 40.00, 1000, 120.00, 2, 2);
+
+INSERT INTO Cliente (Nome, Email, Telefone, Endereco, Data_Registro) VALUES
+('Carlos Pereira', 'carlos@gmail.com', '123456789', 'Rua A, 123, Bairro B, Cidade C, Estado D, 12345-678', '2023-01-01'),
+('Ana Santos', 'ana@gmail.com', '987654321', 'Rua X, 456, Bairro Y, Cidade Z, Estado W, 87654-321', '2023-02-01');
+INSERT INTO Pedido (Data_Pedido, Cliente_ID, Bebida_ID, Quantidade) VALUES
+('2024-01-01', 1, 1, 3),
+('2024-02-01', 2, 2, 1);
+
+```
