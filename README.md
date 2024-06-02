@@ -293,7 +293,66 @@ WHERE Pedido.Data_Pedido = '2024-01-01';
 ```
 
 
-<img src = "">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Cliente_pedido2.png">
+
+# Seleção com Agregação para Contar Bebidas por Tipo
+Propósito: Contar quantas bebidas existem de cada tipo.
+
+
+```sql
+SELECT Tipo_Bebida.Descricao, COUNT(Bebida.ID_Bebida) AS Quantidade_Bebidas
+FROM Bebida
+JOIN Tipo_Bebida ON Bebida.Tipo_ID = Tipo_Bebida.ID_Tipo
+GROUP BY Tipo_Bebida.Descricao;
+```
+
+
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/contag-bebidas.png">
+
+
+# Seleção com Junção e Filtro por Tipo de Bebida
+Propósito: Exibir os nomes das bebidas e seus preços para um tipo específico de bebida.
+
+
+```sql
+SELECT Bebida.Nome, Bebida.Preco
+FROM Bebida
+JOIN Tipo_Bebida ON Bebida.Tipo_ID = Tipo_Bebida.ID_Tipo
+WHERE Tipo_Bebida.Descricao = 'Cerveja';
+```
+
+
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/preco-bebbb.png">
+
+
+# Seleção com Junção e Ordenação por Cliente e Pedido
+Propósito: Exibir todos os pedidos, ordenados pelo nome do cliente e depois pela data do pedido.
+
+
+```sql
+SELECT Pedido.ID_Pedido, Cliente.Nome, Pedido.Data_Pedido
+FROM Pedido
+JOIN Cliente ON Pedido.Cliente_ID = Cliente.ID_Cliente
+ORDER BY Cliente.Nome, Pedido.Data_Pedido;
+```
+
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Idpedi-nomeclie-data.png">
+
+
+# Seleção com Filtro em Bebidas e Fornecedores
+Propósito: Exibir as bebidas fornecidas por uma empresa específica e filtrar por bebidas com teor alcoólico acima de um valor específico.
+
+
+
+```sql
+SELECT Bebida.Nome, Bebida.Teor_Alcoolico, Fornecedor.Nome_Empresa
+FROM Bebida
+JOIN Fornecedor ON Bebida.Fornecedor_ID = Fornecedor.ID_Fornecedor
+WHERE Fornecedor.Nome_Empresa = 'Cervejaria XYZ' AND Bebida.Teor_Alcoolico > 5.0;
+```
+
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/print-bebbd.png">
+
 
 
 
