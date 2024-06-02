@@ -73,9 +73,11 @@ INSERT INTO Cliente (Nome, Email, Telefone, Endereco, Data_Registro) VALUES
 INSERT INTO Pedido (Data_Pedido, Cliente_ID, Bebida_ID, Quantidade) VALUES
 ('2024-01-01', 1, 1, 3),
 ('2024-02-01', 2, 2, 1);
-
 ```
 
 #    6 - CRUD
-        Create
+
+Create 
+
+    ```sql 
 
