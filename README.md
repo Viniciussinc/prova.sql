@@ -216,5 +216,15 @@ WHERE Nome_Empresa = 'Cervejaria Nova'
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Delete_crud.png">
 
 
+# Seleção Simples de Fornecedores
+Propósito: Exibir todos os fornecedores cadastrados.
+
+
+``` sql
+SELECT * FROM Fornecedor;
+```
+
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Read.png">
+
 
 
