@@ -52,7 +52,7 @@ CREATE TABLE Pedido (
     FOREIGN KEY (Bebida_ID) REFERENCES Bebida(ID_Bebida)
 ```
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/print%20insert.png">
+
 #    5 - Inserção de dados 
 
 
@@ -180,6 +180,8 @@ INSERT INTO Pedido (Data_Pedido, Cliente_ID, Bebida_ID, Quantidade) VALUES
 ('2024-08-02', 20, 20, 2);
 ```
 
+
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/print%20insert.png">
 #    6 - CRUD
 
 ```sql
