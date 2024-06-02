@@ -51,7 +51,7 @@ CREATE TABLE Pedido (
     FOREIGN KEY (Cliente_ID) REFERENCES Cliente(ID_Cliente),
     FOREIGN KEY (Bebida_ID) REFERENCES Bebida(ID_Bebida)
 ```
-
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/print%20create.png">
 
 #    5 - Inserção de dados 
 
