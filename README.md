@@ -1,14 +1,14 @@
-#    1 -Cenário: Sistema de Gerenciamento de Loja de Bebidas
+#     -Cenário: Sistema de Gerenciamento de Loja de Bebidas
 A loja de bebidas "Bebidas & Cia" necessita de um sistema de gerenciamento de banco de dados para otimizar suas operações tanto na loja física quanto no serviço de delivery. O sistema deve ser capaz de gerenciar informações sobre clientes, produtos (bebidas), pedidos e fornecedores, além de categorizar os tipos de bebidas disponíveis.
-#    2 - Modelagem Conceitual
+#     - Modelagem Conceitual
 
 <img src = "https://raw.githubusercontent.com/Viniciussinc/prova.sql/main/imagens/Corrigido.png">
 
-#    3 - Modelagem Lógica
+#     - Modelagem Lógica
 
 <img src = "https://raw.githubusercontent.com/Viniciussinc/prova.sql/main/imagens/Opera%20Snapshot_2024-06-01_185115_app.brmodeloweb.com.png">
 
-#    4 - Modelagem Física
+#     - Modelagem Física
 
 ``` sql
 CREATE TABLE Fornecedor (
@@ -53,7 +53,7 @@ CREATE TABLE Pedido (
 ```
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/print%20create.png">
 
-#    5 - Inserção de dados 
+#     - Inserção de dados 
 
 
 ``` sql
@@ -202,10 +202,16 @@ WHERE Nome_Empresa = 'Cervejaria Nova'
 
 # 1 - Create 
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Insert_crud.png">
+
+
 # 2 - Read 
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Read.png">
+
+
 # 3 - Update 
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Update.png">
+
+
 # 4 - Delete 
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Delete_crud.png">
 
