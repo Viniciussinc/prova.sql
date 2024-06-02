@@ -215,6 +215,8 @@ WHERE Nome_Empresa = 'Cervejaria Nova'
 # 4 - Delete 
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Delete_crud.png">
 
+# Relatorios 
+
 
 # Seleção Simples de Fornecedores
 Propósito: Exibir todos os fornecedores cadastrados.
