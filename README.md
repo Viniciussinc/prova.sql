@@ -1,10 +1,10 @@
-# 1 -Cenário: Sistema de Gerenciamento de Loja de Bebidas
+#1 -Cenário: Sistema de Gerenciamento de Loja de Bebidas
 A loja de bebidas "Bebidas & Cia" necessita de um sistema de gerenciamento de banco de dados para otimizar suas operações tanto na loja física quanto no serviço de delivery. O sistema deve ser capaz de gerenciar informações sobre clientes, produtos (bebidas), pedidos e fornecedores, além de categorizar os tipos de bebidas disponíveis.
-# 2 - Modelagem Conceitual
+#2 - Modelagem Conceitual
 <img src = "https://raw.githubusercontent.com/Viniciussinc/prova.sql/main/imagens/Mer%20corrigido.png">
-# 3 - Modelagem Lógica
+#3 - Modelagem Lógica
 <img src = "https://raw.githubusercontent.com/Viniciussinc/prova.sql/main/imagens/Opera%20Snapshot_2024-06-01_185115_app.brmodeloweb.com.png">
-# 4 - Modelagem Física
+#4 - Modelagem Física
 
 ``` sql
 CREATE TABLE Fornecedor (
