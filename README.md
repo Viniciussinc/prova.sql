@@ -229,4 +229,75 @@ SELECT * FROM Fornecedor;
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Read.png">
 
 
+# Seleção com Filtro em Clientes
+Propósito: Exibir os clientes que se registraram após uma data específica.
+
+
+```sql
+SELECT * FROM Cliente
+WHERE Data_Registro > '2023-01-01';
+```
+
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/select%20cliente.png">
+
+
+# Seleção e Ordenação de Bebidas por Preço
+Propósito: Exibir todas as bebidas ordenadas pelo preço, do mais barato ao mais caro.
+
+
+``` sql
+SELECT * FROM Bebida
+ORDER BY Preco ASC;
+```
+
+
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/select_asc_client.png">
+
+
+# Seleção com Junção entre Bebida e Fornecedor
+Propósito: Exibir os nomes das bebidas junto com o nome da empresa fornecedora.
+
+
+```sql
+SELECT Bebida.Nome, Fornecedor.Nome_Empresa
+FROM Bebida
+JOIN Fornecedor ON Bebida.Fornecedor_ID = Fornecedor.ID_Fornecedor;
+```
+
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/nome-bebida-fornec.png">
+
+
+# Seleção com Filtro e Ordenação em Pedidos
+Propósito: Exibir todos os pedidos feitos por um cliente específico, ordenados pela data do pedido.
+
+
+```sql
+SELECT * FROM Pedido
+WHERE Cliente_ID = 1
+ORDER BY Data_Pedido DESC;
+```
+
+
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Pedidos_cliente.png">
+
+
+# Seleção com Junção e Filtro entre Pedido e Cliente
+Propósito: Exibir os detalhes dos pedidos junto com o nome do cliente, filtrando por pedidos feitos em uma data específica.
+
+
+```sql
+SELECT Pedido.ID_Pedido, Pedido.Data_Pedido, Cliente.Nome
+FROM Pedido
+JOIN Cliente ON Pedido.Cliente_ID = Cliente.ID_Cliente
+WHERE Pedido.Data_Pedido = '2024-01-01';
+```
+
+
+<img src = "">
+
+
+
+
+
+
 
