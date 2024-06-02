@@ -5,6 +5,7 @@ A loja de bebidas "Bebidas & Cia" necessita de um sistema de gerenciamento de ba
 # 3 - Modelagem Lógica
 <img src = "https://raw.githubusercontent.com/Viniciussinc/prova.sql/main/imagens/Opera%20Snapshot_2024-06-01_185115_app.brmodeloweb.com.png">
 # 4 - Modelagem Física
+
 ``` sql
 CREATE TABLE Fornecedor (
     ID_Fornecedor INT PRIMARY KEY IDENTITY(1,1),
