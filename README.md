@@ -195,17 +195,18 @@ UPDATE Cliente
 SET Telefone = '999999999' 
 WHERE ID_Cliente = 1
 
-DELETE FROM Fornecedor 
-WHERE ID_Fornecedor = 2;
+DELETE FROM Fornecedor
+WHERE Nome_Empresa = 'Cervejaria Nova'
+
 ```
 
-1 - Create 
+# 1 - Create 
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Insert_crud.png">
-2 - Read 
+# 2 - Read 
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Read.png">
-3 - Update 
+# 3 - Update 
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Update.png">
-4 - Delete 
+# 4 - Delete 
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Delete_crud.png">
 
 
