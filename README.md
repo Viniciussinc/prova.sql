@@ -78,16 +78,16 @@ INSERT INTO Pedido (Data_Pedido, Cliente_ID, Bebida_ID, Quantidade) VALUES
 #    6 - CRUD
 
 ```sql
-1 - Create
+
  INSERT INTO Fornecedor (Nome_Empresa, CNPJ, Telefone, Endereco) 
 VALUES ('Zezim distribuidora', '12345678901234', '987654321', 'Rua Nova, 789, Bairro C, Cidade D, Estado E, 54321-098');
-2 - Read
+
 SELECT * FROM Fornecedor;
-3 - Update
+
 UPDATE Cliente 
 SET Telefone = '999999999' 
 WHERE ID_Cliente = 1
-3 - Delete
+
 DELETE FROM Fornecedor 
 WHERE ID_Fornecedor = 2;
 ```
