@@ -55,6 +55,7 @@ CREATE TABLE Pedido (
 
 #4 - Inserção de dados 
 
+
 ``` sql
 INSERT INTO Fornecedor (Nome_Empresa, CNPJ, Telefone, Endereco) VALUES
 ('Cervejaria XYZ', '12345678000100', '123456789', 'Rua A, 123, Bairro B, Cidade C, Estado D, 12345-678'),
@@ -74,3 +75,4 @@ INSERT INTO Pedido (Data_Pedido, Cliente_ID, Bebida_ID, Quantidade) VALUES
 ('2024-02-01', 2, 2, 1);
 
 ```
+
