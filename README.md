@@ -2,7 +2,7 @@
 A loja de bebidas "Bebidas & Cia" necessita de um sistema de gerenciamento de banco de dados para otimizar suas operações tanto na loja física quanto no serviço de delivery. O sistema deve ser capaz de gerenciar informações sobre clientes, produtos (bebidas), pedidos e fornecedores, além de categorizar os tipos de bebidas disponíveis.
 #     - Modelagem Conceitual
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Mer_bar%20(4).jpg">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/ccconcept.png">
 
 #     - Modelagem Lógica
 
