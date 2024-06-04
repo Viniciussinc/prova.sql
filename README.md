@@ -6,7 +6,7 @@ A loja de bebidas "Bebidas & Cia" necessita de um sistema de gerenciamento de ba
 
 #     - Modelagem Lógica
 
-<img src = "https://raw.githubusercontent.com/Viniciussinc/prova.sql/main/imagens/Opera%20Snapshot_2024-06-01_185115_app.brmodeloweb.com.png">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/fatec_bar.png">
 
 #     - Modelagem Física
 
