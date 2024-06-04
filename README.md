@@ -16,7 +16,12 @@ CREATE TABLE Fornecedor (
     Nome_Empresa NVARCHAR(255) NOT NULL,
     CNPJ NVARCHAR(14) NOT NULL,
     Telefone NVARCHAR(15) NOT NULL,
-    Endereco NVARCHAR(255) NOT NULL
+    Rua NVARCHAR(255) NOT NULL,
+    Numero NVARCHAR(10) NOT NULL,
+    Bairro NVARCHAR(100) NOT NULL,
+    Cidade NVARCHAR(100) NOT NULL,
+    Estado NVARCHAR(2) NOT NULL,
+    CEP NVARCHAR(10) NOT NULL
 );
 CREATE TABLE Tipo_Bebida (
     ID_Tipo INT PRIMARY KEY IDENTITY(1,1),
@@ -26,9 +31,9 @@ CREATE TABLE Bebida (
     ID_Bebida INT PRIMARY KEY IDENTITY(1,1),
     Nome NVARCHAR(255) NOT NULL,
     Tipo NVARCHAR(50) NOT NULL,
-    Teor_Alcoolico DECIMAL(5,2) NOT NULL,  
+    Teor_Alcoolico DECIMAL(5,2) NOT NULL,
     Volume INT NOT NULL,
-    Preco DECIMAL(7,2) NOT NULL,  
+    Preco DECIMAL(7,2) NOT NULL,
     Fornecedor_ID INT NOT NULL,
     Tipo_ID INT NOT NULL,
     FOREIGN KEY (Fornecedor_ID) REFERENCES Fornecedor(ID_Fornecedor),
@@ -37,19 +42,30 @@ CREATE TABLE Bebida (
 CREATE TABLE Cliente (
     ID_Cliente INT PRIMARY KEY IDENTITY(1,1),
     Nome NVARCHAR(100) NOT NULL,
-    Email NVARCHAR(100) NOT NULL,
     Telefone NVARCHAR(15) NOT NULL,
-    Endereco NVARCHAR(255) NOT NULL,
-    Data_Registro DATE NOT NULL
+    Data_Registro DATE NOT NULL,
+    Total_Pedidos INT NOT NULL DEFAULT 0
+);
+CREATE TABLE Email_Cliente (
+    ID_Email INT PRIMARY KEY IDENTITY(1,1),
+    Cliente_ID INT NOT NULL,
+    Email NVARCHAR(100) NOT NULL,
+    FOREIGN KEY (Cliente_ID) REFERENCES Cliente(ID_Cliente)
 );
 CREATE TABLE Pedido (
     ID_Pedido INT PRIMARY KEY IDENTITY(1,1),
     Data_Pedido DATE NOT NULL,
     Cliente_ID INT NOT NULL,
-    Bebida_ID INT NOT NULL,
+    FOREIGN KEY (Cliente_ID) REFERENCES Cliente(ID_Cliente)
+);
+CREATE TABLE Pedido_Bebida (
+    ID_Pedido INT NOT NULL,
+    ID_Bebida INT NOT NULL,
     Quantidade INT NOT NULL,
-    FOREIGN KEY (Cliente_ID) REFERENCES Cliente(ID_Cliente),
-    FOREIGN KEY (Bebida_ID) REFERENCES Bebida(ID_Bebida)
+    PRIMARY KEY (ID_Pedido, ID_Bebida),
+    FOREIGN KEY (ID_Pedido) REFERENCES Pedido(ID_Pedido),
+    FOREIGN KEY (ID_Bebida) REFERENCES Bebida(ID_Bebida)
+);
 ```
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/print%20create.png">
 
