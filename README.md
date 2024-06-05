@@ -283,7 +283,7 @@ SELECT * FROM Cliente
 WHERE Data_Registro > '2023-01-01';
 ```
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/select_cliente.png">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Correçao1.png">
 
 
 # Seleção e Ordenação de Bebidas por Preço
@@ -296,7 +296,7 @@ ORDER BY Preco ASC;
 ```
 
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/select_asc_client.png">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/correçao_2.png">
 
 
 # Seleção com Junção entre Bebida e Fornecedor
@@ -309,7 +309,7 @@ FROM Bebida
 JOIN Fornecedor ON Bebida.Fornecedor_ID = Fornecedor.ID_Fornecedor;
 ```
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/nome-bebida-fornec.png">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/corrçao_4.png">
 
 
 # Seleção com Filtro e Ordenação em Pedidos
@@ -323,22 +323,21 @@ ORDER BY Data_Pedido DESC;
 ```
 
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/cliente_1.png">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Correçao_5.png">
 
 
-# Seleção com Junção e Filtro entre Pedido e Cliente
-Propósito: Exibir os detalhes dos pedidos junto com o nome do cliente, filtrando por pedidos feitos em uma data específica.
+# Consulta : Listar todos os clientes e seus e-mails.
 
 
 ```sql
-SELECT Pedido.ID_Pedido, Pedido.Data_Pedido, Cliente.Nome
-FROM Pedido
-JOIN Cliente ON Pedido.Cliente_ID = Cliente.ID_Cliente
-WHERE Pedido.Data_Pedido = '2024-01-01';
+SELECT c.Nome, e.Email
+FROM Cliente c
+JOIN Email_Cliente e ON c.ID_Cliente = e.Cliente_ID
+ORDER BY c.Nome;
 ```
 
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Cliente_pedido2.png">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Listar8.png">
 
 # Seleção com Agregação para Contar Bebidas por Tipo
 Propósito: Contar quantas bebidas existem de cada tipo.
@@ -352,7 +351,7 @@ GROUP BY Tipo_Bebida.Descricao;
 ```
 
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/contag-bebidas.png">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Lista9.png">
 
 
 # Seleção com Junção e Filtro por Tipo de Bebida
@@ -367,7 +366,7 @@ WHERE Tipo_Bebida.Descricao = 'Cerveja';
 ```
 
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/preco-bebbb.png">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Select10.png">
 
 
 # Seleção com Junção e Ordenação por Cliente e Pedido
@@ -381,22 +380,23 @@ JOIN Cliente ON Pedido.Cliente_ID = Cliente.ID_Cliente
 ORDER BY Cliente.Nome, Pedido.Data_Pedido;
 ```
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Idpedi-nomeclie-data.png">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/selct11.png">
 
 
 # Seleção com Filtro em Bebidas e Fornecedores
-Propósito: Exibir as bebidas fornecidas por uma empresa específica e filtrar por bebidas com teor alcoólico acima de um valor específico.
+Propósito: Esta consulta mostra o total de pedidos feitos por cada cliente, ordenados em ordem decrescente pelo total de pedidos.
 
 
 
 ```sql
-SELECT Bebida.Nome, Bebida.Teor_Alcoolico, Fornecedor.Nome_Empresa
-FROM Bebida
-JOIN Fornecedor ON Bebida.Fornecedor_ID = Fornecedor.ID_Fornecedor
-WHERE Fornecedor.Nome_Empresa = 'Cervejaria XYZ' AND Bebida.Teor_Alcoolico > 5.0;
+SELECT c.Nome, COUNT(p.ID_Pedido) AS TotalPedidos
+FROM Cliente c
+JOIN Pedido p ON c.ID_Cliente = p.Cliente_ID
+GROUP BY c.Nome
+ORDER BY TotalPedidos DESC;
 ```
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/print-bebbd.png">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/slclt44.png">
 
 
 
