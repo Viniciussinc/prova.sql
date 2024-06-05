@@ -271,7 +271,7 @@ Propósito: Exibir todos os fornecedores cadastrados.
 SELECT * FROM Fornecedor;
 ```
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Read.png">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Reading.png">
 
 
 # Seleção com Filtro em Clientes
