@@ -323,7 +323,7 @@ ORDER BY Data_Pedido DESC;
 ```
 
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/Pedidos_cliente.png">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/cliente_1.png">
 
 
 # Seleção com Junção e Filtro entre Pedido e Cliente
