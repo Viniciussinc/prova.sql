@@ -283,7 +283,7 @@ SELECT * FROM Cliente
 WHERE Data_Registro > '2023-01-01';
 ```
 
-<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/select%20cliente.png">
+<img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/select_cliente.png">
 
 
 # Seleção e Ordenação de Bebidas por Preço
