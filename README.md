@@ -1,5 +1,94 @@
 #   - Cenário: Sistema de Gerenciamento de Loja de Bebidas
-A loja de bebidas "Bebidas & Cia" necessita de um sistema de gerenciamento de banco de dados para otimizar suas operações tanto na loja física quanto no serviço de delivery. O sistema deve ser capaz de gerenciar informações sobre clientes, produtos (bebidas), pedidos e fornecedores, além de categorizar os tipos de bebidas disponíveis.
+Cenário: Sistema de Gerenciamento de Pedidos de Bebidas
+A empresa "Bebidas & Cia" é especializada na comercialização de diversas bebidas, atendendo a um amplo público de consumidores. A fim de melhorar a eficiência no gerenciamento de seus pedidos e o relacionamento com clientes e fornecedores, a empresa decidiu desenvolver um sistema de banco de dados robusto e eficiente.
+
+Entidades e Relacionamentos
+Fornecedor: Representa as empresas que fornecem as bebidas vendidas pela Bebidas & Cia. Cada fornecedor possui um nome de empresa, CNPJ, telefone e endereço.
+
+Atributos:
+ID_Fornecedor (Chave Primária)
+Nome_Empresa (Simples)
+CNPJ (Simples)
+Telefone (Simples)
+Endereco (Simples)
+Tipo_Bebida: Classifica as bebidas por tipo, como cerveja, vodka, entre outros. Cada tipo de bebida possui uma descrição.
+
+Atributos:
+ID_Tipo (Chave Primária)
+Descricao (Simples)
+Bebida: Representa cada bebida vendida pela empresa, incluindo seu nome, tipo, teor alcoólico, volume, preço, fornecedor e tipo.
+
+Atributos:
+ID_Bebida (Chave Primária)
+Nome (Simples)
+Tipo (Simples)
+Teor_Alcoolico (Simples)
+Volume (Simples)
+Preco (Simples)
+Fornecedor_ID (Chave Estrangeira)
+Tipo_ID (Chave Estrangeira)
+Cliente: Representa os clientes que fazem pedidos na Bebidas & Cia. Cada cliente possui um nome, telefone, data de registro e total de pedidos feitos.
+
+Atributos:
+ID_Cliente (Chave Primária)
+Nome (Simples)
+Telefone (Simples)
+Data_Registro (Simples)
+Total_Pedidos (Derivado)
+Email_Cliente: Armazena os e-mails dos clientes, permitindo que cada cliente tenha múltiplos e-mails registrados.
+
+Atributos:
+ID_Email (Chave Primária)
+Email (Simples)
+Cliente_ID (Chave Estrangeira)
+Pedido: Representa os pedidos feitos pelos clientes, contendo a data do pedido e o cliente que realizou o pedido. A relação entre Pedido e Bebida é de muitos para muitos, onde um pedido pode conter várias bebidas e uma bebida pode estar em vários pedidos.
+
+Atributos:
+ID_Pedido (Chave Primária)
+Data_Pedido (Simples)
+Cliente_ID (Chave Estrangeira)
+Pedido_Bebida: Tabela de relacionamento para gerenciar a associação entre pedidos e bebidas, especificando a quantidade de cada bebida em cada pedido.
+
+Atributos:
+ID_Pedido (Chave Estrangeira)
+ID_Bebida (Chave Estrangeira)
+Quantidade (Simples)
+Exemplos de Atributos e Relacionamentos
+Atributos Simples: Nome, Telefone, Preco.
+Atributos Derivados: Total_Pedidos no Cliente.
+Relacionamentos:
+Um para Muitos (1
+): Um Fornecedor pode fornecer muitas Bebidas.
+Muitos para Muitos (N
+): Um Pedido pode conter muitas Bebidas e uma Bebida pode estar em muitos Pedidos.
+Modelo Conceitual
+No modelo conceitual, temos as entidades Fornecedor, Tipo_Bebida, Bebida, Cliente, Email_Cliente, Pedido e Pedido_Bebida com seus respectivos atributos e relacionamentos. Este modelo descreve de maneira abstrata como os dados estão organizados e interligados dentro do sistema, sem definir detalhes técnicos como tipos de dados ou restrições de banco de dados.
+
+Modelo Lógico
+No modelo lógico, cada entidade é transformada em uma tabela de banco de dados com definições detalhadas de tipos de dados e restrições.
+
+Por exemplo:
+
+A tabela Cliente inclui colunas como ID_Cliente, Nome, Telefone, Data_Registro e Total_Pedidos.
+A tabela Pedido_Bebida gerencia a relação muitos para muitos entre Pedidos e Bebidas, com colunas ID_Pedido, ID_Bebida e Quantidade.
+Modelo Físico
+O modelo físico inclui a implementação concreta do modelo lógico em um sistema de gerenciamento de banco de dados (SGBD) específico, usando a linguagem SQL para criar tabelas, definir chaves primárias e estrangeiras, e implementar inserções, atualizações, exclusões e consultas.
+
+Inserção de Dados e CRUD
+Os dados são inseridos em todas as tabelas para inicializar o banco de dados com informações coerentes. As operações CRUD (Create, Read, Update, Delete) são demonstradas com comandos SQL para cada tabela, ilustrando como o sistema pode ser manipulado e consultado.
+
+Relatórios
+Relatórios são gerados usando consultas SQL que demonstram seleção, filtro e ordenação, exibindo relações entre as tabelas. Essas consultas são essenciais para fornecer insights sobre o funcionamento do sistema e a interação entre os dados.
+
+Conclusão
+Este sistema de banco de dados fornece uma estrutura robusta para gerenciar fornecedores, tipos de bebidas, clientes e pedidos, otimizando a operação da Bebidas & Cia e permitindo uma análise eficiente dos dados.
+
+
+
+
+
+
+
 #     - Modelagem Conceitual
 
 <img src = "https://github.com/Viniciussinc/prova.sql/blob/main/imagens/2000110.png">
